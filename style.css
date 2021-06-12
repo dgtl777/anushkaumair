@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(bisque, white);
+}
+h1 {
+  color: yellow;
+}
+h2 {
+  color: white;
+}
+.title {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to top, brown, burlywood);
+}
+nav {
+  height: 40px;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.dishes {
+  width: 80vw;
+  height: 60vh;
+  background-color: burlywood;
+  margin: auto;
+  margin-top: 100px;
+  border: 10px inset brown;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  flex: 1;
+  height: 30%;
+  margin: 5px;
+  background-color: white;
+  padding: 10px;
+}
+img:hover {
+  transform: scale(1.2, 1.2);
+}
+#contact {
+  color: black;
+}
+#about {
+  color: black;
+}
