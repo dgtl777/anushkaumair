@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 25</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Storage APIs</h1>
+    </header>
+    <h1 id="myName"></h1>
+
+    <h1>Geolocation</h1>
+    <h1 id="myLocation"></h1>
+    <button onclick="myLocation()">Get Location</button>
+
+</body>
+<script>
+
+    function myLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.
+                getCurrentPosition(ShowPosition);
+        } else {
+            document.getElementById("myLocation").
+                innerText = "No Location Found";
+        }
+        function ShowPosition(pos) {
+            document.getElementById("myLocation").
+                innerText = "Latitude:" + pos.coords.latitude +
+                "Longitude" + pos.coords.longitude;
+        }
+    }
+
+    localStorage.setItem("myName", "Jay");
+    document.getElementById("myName").innerText =
+        localStorage.getItem("myName");
+    localStorage.removeItem("myName");
+
+    localStorage.myName = "Jay";
+    document.getElementById("myName").innerText =
+        localStorage.myName;
+
+    sessionStorage.setItem("myName", "Jay");
+    document.getElementById("myName").innerText =
+        sessionStorage.getItem("myName");
+
+</script>
+
+</html>
