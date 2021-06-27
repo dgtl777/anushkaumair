@@ -16,7 +16,9 @@
             color: blue;
         }
 
-        #drop {
+        #cat,
+        #dog,
+        #mouse {
             width: 400px;
             height: 300px;
             border: 1px solid black;
@@ -33,7 +35,13 @@
     <header>
         <h1>Drag and Drop</h1>
     </header>
-    <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h1 id="result"></h1>
+    <div id="cat" ondrop="drop(event)" ondragover="allowDrop(event)">
+        Cat</div>
+    <div id="dog" ondrop="drop(event)" ondragover="allowDrop(event)">
+        Dog</div>
+    <div id="mouse" ondrop="drop(event)" ondragover="allowDrop(event)">
+        Mouse</div>
 
     <img id="drag" ondragstart="drag(event)" draggable="true"
         src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" alt="">
@@ -47,6 +55,14 @@
     }
     function drop(ev) {
         ev.preventDefault();
+        if (ev.path[0].id == "dog") {
+            document.getElementById("result").innerText =
+                "Correct";
+        }
+        else {
+            document.getElementById("result").innerText =
+                "Wrong";
+        }
         var data = ev.dataTransfer.getData("data");
         ev.target.appendChild(document.getElementById(data));
     }
