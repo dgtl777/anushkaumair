@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(yellow,orange,orangered,red,darkred);
+            text-align: center;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+    #endevor,#allmight,#erazerhead {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>quiz</h1>
+        
+    </header>
+    <h1 id="result"></h1>
+    <div id="endevor" ondrop="drop(event)" ondragover="allowDrop(event)">endevor</div>
+    <div id="allmight" ondrop="drop(event)" ondragover="allowDrop(event)">allmight</div>
+    <div id="erazerhead" ondrop="drop(event)" ondragover="allowDrop(event)">erazerhead</div>
+
+    <img id="drag" ondragstart="drag(event)" draggable="true"
+        src="https://www.looper.com/img/gallery/my-hero-academia-the-reason-all-might-is-the-most-powerful-teacher/intro-1596067346.jpg" alt="">
+    <br><br>
+<a href="session 28 5.html">next</a><br><br>
+<a href="session 28 3.html">back</a><br><br>
+</body>
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev) {
+        ev.dataTransfer.setData("data", ev.target.id);
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        if(ev.path[0].id == "allmight"){
+           document.getElementById("result").innerText =
+               "correct u have guessed correctly";      
+
+        }
+        else{
+            document.getElementById("result").innerText = "wrong";
+
+        }
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
