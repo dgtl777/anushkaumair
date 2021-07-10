@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 31</title>
+    <style>
+        body {
+            background-color: palevioletred;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Javascript Datatypes</h1>
+    </header>
+
+    <h2>String</h2>
+    <h2 id="string"></h2>
+
+    <h2>Number</h2>
+    <h2 id="number"></h2>
+
+    <h2>Number</h2>
+    <h2 id="float"></h2>
+
+    <h2>Array 1st Element</h2>
+    <h2 class="array0"></h2>
+
+    <h2>Array 2nd Element</h2>
+    <h2 class="array1"></h2>
+
+    <h2>Dictionary</h2>
+    <h2 id="user"></h2>
+    <h2 id="email"></h2>
+    <h2 id="address"></h2>
+    <h2 id="phone"></h2>
+
+
+</body>
+<script>
+    var user = {
+        userName: "John",
+        email: "John@John.com",
+        address: "Dubai",
+        phone: "8645012633",
+    };
+    document.getElementById("user").innerText = user.userName;
+    document.getElementById("email").innerText = user.email;
+    document.getElementById("address").innerText = user.address;
+    document.getElementById("phone").innerText = user.phone;
+
+    var myName = "Jay";
+    document.getElementById("string").innerText = myName;
+    console.log(typeof (myName));
+
+    var num = 7;
+    document.getElementById("number").innerText = num;
+    console.log(typeof (num));
+
+    var float = 7.7;
+    document.getElementById("float").innerText = float;
+    console.log(typeof (float));
+
+    var arr = ["Cat", "Dog", 1, "Jay"];
+    document.getElementsByClassName("array0")[0].innerText =
+        arr[0];
+    document.getElementsByClassName("array1")[0].innerText =
+        arr[1];
+    console.log(typeof (arr));
+
+</script>
+
+</html>

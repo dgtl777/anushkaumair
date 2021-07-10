@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 32</title>
+    <style>
+        body {
+            background-color: palevioletred;
+            text-align: center;
+            font-family: 'tahoma', 'san-serif';
+        }
+
+        h1 {
+            color: white;
+        }
+
+        button:hover {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body onload="page()">
+    <header>
+        <h1>JavaScript Functions</h1>
+    </header>
+    <h2 onmouseover="over()">Move your mouse
+        over me!</h2>
+    <button onclick="test()">Click Me!</button>
+    <h2 onmouseleave="leave()">Dont Leave Me!</h2>
+    <form onsubmit="submit()">
+        <input type="text" name="" id="">
+        <input type="submit">
+    </form>
+
+</body>
+<script>
+    function submit() {
+        alert("You Submitted The Form");
+    }
+    function leave() {
+        alert("You Left Me! Very Bad!")
+    }
+    function over() {
+        alert("You have moved over the sentence");
+    }
+    function page() {
+        alert("Page Loaded");
+    }
+    function test() {
+        alert("You Clicked on the Button");
+    }
+</script>
+
+</html>
